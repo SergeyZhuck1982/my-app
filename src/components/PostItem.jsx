@@ -1,14 +1,15 @@
 import React from 'react';
+import MyButton from './UI/button/MyButton';
 
-const PostItem = (props) => {
+const PostItem = ({props, number, post, remove}) => {
     return (
         <div className="post">
             <div className="post__Content">
-                <strong>{props.number}. {props.post.title}</strong>
-                <div>{props.post.body}</div>
+                <strong>{number}. {post.title}</strong>
+                <div>{post.body}</div>
             </div>
             <div className="post__btns">
-                <button>Удалить</button>
+                <MyButton onClick={(e=>{remove(post)})}>Удалить</MyButton>
             </div>
         </div>
     );
