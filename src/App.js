@@ -1,19 +1,32 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useMemo } from "react";
+import PostFilter from "./components/PostFilter";
 import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
+
+
 
 import "./styles/App.css"
 
 function App() {
     const [posts, setPosts] = useState([
-        {id:1, title:"JavaScript - 1", body:"Description"},
-        {id:2, title:"JavaScript - 2", body:"Description"},
-        {id:3, title:"JavaScript - 3", body:"Description"},
+        {id:1, title:"bbbs", body:"555"},
+        {id:2, title:"ssss", body:"3333"},
+        {id:3, title:"ddddb", body:"4444"},
     ]);
-
-    const [title, setTitle] = useState("")
-    const [body, setBody] = useState("")
     
+   const [filter, setFilter] = useState({sort:"", query:""})
+    
+
+    const sortedPosts = useMemo(()=>{
+        return filter.sort 
+            ? [...posts].sort((a,b) => {return a[filter.sort].localeCompare(b[filter.sort])})
+            : posts
+    }, [filter.sort, posts])
+
+    const sortedAndSearchedPosts = useMemo(() => {
+        return sortedPosts.filter(post => post.title.toLowerCase().includes(filter.query.toLowerCase()))
+    }, [filter.query, sortedPosts])
+
     const createPost = (newPost) => {
         setPosts([...posts, newPost])
     }
@@ -25,10 +38,9 @@ function App() {
     return (
         <div className="App">
             <PostForm create={createPost}/>
-            {posts.length !== 0 
-                ? <PostList remove={removePost}  posts={posts} title="Посты про JS"/>
-                : <h1 style={{textAlign:"center"}}>Посты не найдены</h1>
-            }
+            <hr style={{margin:"15px 0"}}/>
+            <PostFilter filter={filter} setFilter={setFilter}/>
+            <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Посты про JS"/>
         </div>
     );
 }
