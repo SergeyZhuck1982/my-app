@@ -1,0 +1,50 @@
+[
+    {
+        "id": "sensory",
+        "name": {
+            "ru": "Сенсорика"
+        }
+    },
+    {
+        "id": "intuition",
+        "name": {
+            "ru": "Интуиция"
+        }
+    },
+    {
+        "id": "extraversion",
+        "name": {
+            "ru": "Экстраверсия"
+        }
+    },
+    {
+        "id": "introversion",
+        "name": {
+            "ru": "Интроверсия"
+        }
+    },
+    {
+        "id": "rationality",
+        "name": {
+            "ru": "Рациональность"
+        }
+    },
+    {
+        "id": "irrationality",
+        "name": {
+            "ru": "Иррациональность"
+        }
+    },
+    {
+        "id": "logic",
+        "name": {
+            "ru": "Логика"
+        }
+    },
+    {
+        "id": "ethics",
+        "name": {
+            "ru": "Этика"
+        }
+    }
+]
