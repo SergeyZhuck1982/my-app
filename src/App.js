@@ -8,7 +8,6 @@ import MyButton from "./components/UI/button/MyButton";
 import Loader from "./components/UI/Loader/Loader";
 import MyModal from "./components/UI/modal/MyModal";
 import Pagination from "./components/UI/pagination/Pagination";
-
 import { useFetching } from "./hooks/useFetching";
 import { usePosts } from "./hooks/usePosts";
 
