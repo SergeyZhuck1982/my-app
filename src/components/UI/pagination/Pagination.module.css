@@ -1,0 +1,27 @@
+.page__wrapper
+{
+    margin:30px 0px ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page__wrapper .page
+{
+    padding:10px;
+    border:1px solid teal;
+    cursor: pointer;
+    color: teal;
+}
+
+.page__wrapper .page.page__current
+{
+    border: 2px solid orange;
+    font-weight: bold;
+    cursor: default;
+}
+
+.page__wrapper .perPage
+{
+    margin-left:20px;
+}
