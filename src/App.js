@@ -6,7 +6,7 @@ import Posts from "./pages/Posts";
 import Home from "./pages/Home";
 import Notfound from "./pages/Notfound";
 import PostDetail from "./pages/PostDetail";
-import "./styles/App.css"
+import  "./styles/App.css"
 
 function App() {
     return (
