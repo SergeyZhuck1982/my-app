@@ -8,6 +8,8 @@ import Notfound from "./pages/Notfound";
 import PostDetail from "./pages/PostDetail";
 import "./styles/App.css"
 
+
+
 function App() {
     return (
         <div className="App">
