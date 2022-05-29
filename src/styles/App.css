@@ -11,7 +11,8 @@
 
 .App {
     width: 800px;
-
+    background: silver;
+    padding: 10px;
 }
 
 .post {
@@ -39,4 +40,36 @@
 .post-exit-active {
     transform: translateX(-350px);
     transition: all 500ms ease-in;
+}
+
+.main__menu
+{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid teal;
+    background-color: teal;
+    color:#fff;
+}
+
+.layout
+{
+    width: 100%;
+}
+
+.content
+{
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.comment {
+    border: 1px dashed silver;
+    padding: 5px;
+    margin: 0 0 10px
+}
+
+.comment ul{
+    list-style: none;
 }
